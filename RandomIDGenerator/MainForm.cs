@@ -36,6 +36,11 @@ namespace RandomIDGenerator
 
         private void GetButton_Click(object sender, EventArgs e)
         {
+            GetID();
+        }
+
+        private void GetID()
+        {
             string indexText = indexTextBox.Text.Trim();
 
             if (indexText.Length == 0)
@@ -47,6 +52,25 @@ namespace RandomIDGenerator
 
             string id = randomID.GetID(index);
             idTextBox.Text = id;
+
+            index++;
+            indexTextBox.Text = index.ToString();
+
+            histroyTextBox.AppendText(id + "\n");
+            histroyTextBox.ScrollToCaret();
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            histroyTextBox.Text = "";
+        }
+
+        private void IndexTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                GetID();
+            }
         }
     }
 }

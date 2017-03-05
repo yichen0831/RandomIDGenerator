@@ -36,6 +36,8 @@
             this.seedTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.histroyTextBox = new System.Windows.Forms.TextBox();
+            this.clearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createButton
@@ -54,6 +56,7 @@
             this.indexTextBox.Name = "indexTextBox";
             this.indexTextBox.Size = new System.Drawing.Size(100, 25);
             this.indexTextBox.TabIndex = 1;
+            this.indexTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.IndexTextBox_KeyUp);
             // 
             // getButton
             // 
@@ -108,11 +111,32 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "ID";
             // 
+            // histroyTextBox
+            // 
+            this.histroyTextBox.Location = new System.Drawing.Point(57, 122);
+            this.histroyTextBox.Multiline = true;
+            this.histroyTextBox.Name = "histroyTextBox";
+            this.histroyTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.histroyTextBox.Size = new System.Drawing.Size(359, 342);
+            this.histroyTextBox.TabIndex = 8;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(341, 470);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.TabIndex = 9;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 514);
+            this.ClientSize = new System.Drawing.Size(477, 514);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.histroyTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.seedTextBox);
@@ -138,6 +162,8 @@
         private System.Windows.Forms.TextBox seedTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox histroyTextBox;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
