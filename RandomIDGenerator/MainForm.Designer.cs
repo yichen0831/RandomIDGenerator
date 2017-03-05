@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.histroyTextBox = new System.Windows.Forms.TextBox();
             this.clearButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.intervalTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // createButton
@@ -130,11 +132,30 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(279, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 15);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Inverval";
+            // 
+            // intervalTextBox
+            // 
+            this.intervalTextBox.Location = new System.Drawing.Point(339, 60);
+            this.intervalTextBox.Name = "intervalTextBox";
+            this.intervalTextBox.Size = new System.Drawing.Size(77, 25);
+            this.intervalTextBox.TabIndex = 11;
+            this.intervalTextBox.Text = "1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 514);
+            this.Controls.Add(this.intervalTextBox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.histroyTextBox);
             this.Controls.Add(this.label3);
@@ -164,6 +185,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox histroyTextBox;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox intervalTextBox;
     }
 }
 

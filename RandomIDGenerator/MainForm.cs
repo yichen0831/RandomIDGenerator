@@ -53,7 +53,15 @@ namespace RandomIDGenerator
             string id = randomID.GetID(index);
             idTextBox.Text = id;
 
-            index++;
+            string intervalText = intervalTextBox.Text.Trim();
+            bool correctFormat = int.TryParse(intervalText, out int interval);
+            if (!correctFormat || interval == 0)
+            {
+                intervalTextBox.Text = "1";
+                interval = 1;
+            }
+
+            index += interval;
             indexTextBox.Text = index.ToString();
 
             histroyTextBox.AppendText(id + "\n");
